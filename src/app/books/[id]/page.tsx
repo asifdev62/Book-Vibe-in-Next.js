@@ -34,7 +34,7 @@ const BookDetailPage = async ({ params }: IBookDetailsPage) => {
         <div className="card lg:card-side bg-base-100 shadow-xl border border-gray-100 overflow-hidden m-15">
 
             {/* Image */}
-            <figure className="lg:w-2/5 bg-gradient-to-br from-green-50 to-emerald-100 p-8">
+            <figure className="lg:w-2/5 bg-linear-to-br from-green-50 to-emerald-100 p-8">
                 <Image
                     src={book.image}
                     alt={book.bookName}
