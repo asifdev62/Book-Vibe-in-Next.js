@@ -2,6 +2,8 @@ import ReadButton from '@/components/bookDetails/ReadButton';
 import WishlistButton from '@/components/bookDetails/WishlistButton';
 import { IBook } from '@/type/booksType';
 import Image from 'next/image';
+import fs from "fs/promises";
+import path from "path";
 
 interface IBookDetailsPage {
     params: {
@@ -10,15 +12,21 @@ interface IBookDetailsPage {
 };
 
 const getBooks = async () => {
-  try{
- const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`);
-   const data = await response.json();
-  return data;
-}catch(error){
-  console.error("Error fetching books data:", error);
-  return[]
-}
-}
+  try {
+    const filePath = path.join(
+      process.cwd(),
+      "public",
+      "booksData.json"
+    );
+
+    const file = await fs.readFile(filePath, "utf-8");
+
+    return JSON.parse(file);
+  } catch (error) {
+    console.error("Error fetching books data:", error);
+    return [];
+  }
+};
 
 
 
