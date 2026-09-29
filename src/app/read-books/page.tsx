@@ -57,7 +57,7 @@ const Page = () => {
     })
 
     return (
-        <div className='flex justify-center py-12'>
+        <div className='w-full overflow-x-auto px-4 py-12 flex justify-center'>
            {readBooks.length > 0 ? <BarChart
                 style={{ width: '100%', maxWidth: '700px', maxHeight: '70vh', aspectRatio: 1.618 }}
                 responsive

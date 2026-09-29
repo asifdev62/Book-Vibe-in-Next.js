@@ -7,7 +7,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className="bg-base-100 shadow-sm py-3 border-b border-gray-200">
-      <div className="navbar max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-14 xl:px-20">
+      <div className="navbar max-w-7xl mx-auto px-1 sm:px-4 md:px-6 lg:px-14 xl:px-20">
 
 
         <div className="navbar-start min-w-0">
@@ -55,7 +55,7 @@ const Navbar = () => {
           </div>
 
         
-          <div className="flex items-center min-w-0">
+          <div className="flex items-center min-w-0 gap-0">
             <Image
               src={Logo}
               alt="Book Vibe Logo"
@@ -66,7 +66,7 @@ const Navbar = () => {
 
             <Link
               href="/"
-              className="btn btn-ghost text-sm sm:text-lg font-bold px-1 sm:px-3 whitespace-nowrap"
+              className="btn btn-ghost text-sm sm:text-lg font-bold px-1 sm:px-2 whitespace-nowrap"
             >
               Book Vibe
             </Link>
@@ -92,13 +92,13 @@ const Navbar = () => {
         </div>
 
     
-        <div className="navbar-end gap-1 sm:gap-2 md:gap-4">
+        <div className="navbar-end gap-1 sm:gap-2 md:gap-4 shrink-0">
 
-          <button className="btn btn-accent btn-xs sm:btn-sm md:btn-md">
+          <button className="btn btn-accent btn-xs sm:btn-sm md:btn-md px-2 sm:px-3">
             Sign In
           </button>
 
-          <button className="btn btn-error btn-xs sm:btn-sm md:btn-md">
+          <button className="btn btn-error btn-xs sm:btn-sm md:btn-md px-2 sm:px-3">
             Sign Up
           </button>
 
