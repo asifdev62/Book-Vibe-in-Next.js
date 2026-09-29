@@ -8,8 +8,13 @@ import { toast } from 'react-toastify';
 
 const WishlistButton = ({book}: {book: IBook}) => {
    
-    const {wishlist, setWishlist} = useContext(BookContext)
-    
+  const context = useContext(BookContext);
+
+  if (!context) {
+    throw new Error('WishlistButton must be used inside BooksProvider');
+  }
+
+  const { wishlist, setWishlist } = context;    
 const handleAddToWishlist = ()=>{
     console.log('wishlist book btn triggerd', book);
     setWishlist([...wishlist, book]);
