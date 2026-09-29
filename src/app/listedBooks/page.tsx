@@ -9,8 +9,6 @@ const ListedBookspage = () => {
   const context = useContext(BookContext);
 
 
-  // const {readBooks , wishlist} = useContext(BookContext);
-
  const [sortBy, setSortBy] = useState<"rating" | "pages" | "year">("rating");
 
  if (!context) {
